@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-morado text-crema font-sans;
+    }
+
+    * {
+        @apply scroll-smooth;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-oro hover:bg-[#b5952f] text-[#2D1533] font-semibold px-6 py-3 rounded-lg transition-all duration-200 active:scale-95 shadow-md;
+    }
+
+    .btn-secondary {
+        @apply border-2 border-oro text-oro hover:bg-oro hover:text-[#2D1533] font-semibold px-6 py-3 rounded-lg transition-all duration-200;
+    }
+
+    .card {
+        @apply bg-[#2D1533] rounded-xl border border-oro/20 p-6 shadow-sm;
+    }
+
+    .input {
+        @apply w-full bg-[#2D1533] border border-oro/30 text-crema rounded-lg px-4 py-3 focus:outline-none focus:border-oro focus:ring-1 focus:ring-oro transition-all placeholder:text-[#8C8273];
+    }
+
+    .label {
+        @apply block text-sm text-crema mb-1 font-semibold;
+    }
+}
+
+/* Animación tijera separador */
+@keyframes snip {
+
+    0%,
+    100% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+.scissors {
+    display: inline-block;
+    animation: snip 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4A154B;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 3px;
+}
